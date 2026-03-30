@@ -1,9 +1,11 @@
 import cv2 as cv
 import numpy as np
 import sys
+from matplotlib import pyplot as plt
 
 #Below is the exmple code from the opencv docs to capture video from webcam and display it in a window. Press 'q' to quit the window.
-cap = cv.VideoCapture(0)
+#Set the argument of cv.VideoCapture() to 0 to use the default webcam, or 1 to use an external webcam. (For this projcet, we will need to use OBS to create a virtual webcam))
+cap = cv.VideoCapture(1)
 if not cap.isOpened():
     print("Cannot open camera")
     sys.exit() 
